@@ -1,0 +1,316 @@
+
+/* CONFIGURAÇÃO GERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+}
+
+
+/* CABEÇALHO */
+
+header {
+    background: #111;
+    color: white;
+    padding: 22px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #c9a34a;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c9a34a;
+}
+
+.botao-carrinho {
+    background: #c9a34a;
+    color: #111;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* BANNER */
+
+.banner {
+    background: linear-gradient(120deg, #111, #333);
+    min-height: 400px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px 10%;
+    color: white;
+}
+
+.banner-conteudo {
+    max-width: 600px;
+}
+
+.subtitulo {
+    color: #c9a34a;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.banner h1 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.banner-conteudo > p:not(.subtitulo) {
+    color: #ccc;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.botao-banner {
+    display: inline-block;
+    background: #c9a34a;
+    color: #111;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.botao-banner:hover {
+    background: white;
+}
+
+
+/* CATEGORIAS */
+
+.categorias {
+    text-align: center;
+    padding: 60px 7%;
+}
+
+.categorias h2,
+main h2 {
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.descricao {
+    color: #777;
+    margin-top: 12px;
+}
+
+.botoes-categorias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.botoes-categorias button {
+    background: white;
+    border: 1px solid #c9a34a;
+    padding: 12px 22px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.botoes-categorias button:hover {
+    background: #c9a34a;
+    color: #111;
+}
+
+
+/* PRODUTOS */
+
+main {
+    padding: 30px 7% 80px;
+    text-align: center;
+}
+
+.lista-produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.produto {
+    background: white;
+    padding: 22px;
+    border-radius: 6px;
+    text-align: left;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.produto-icone {
+    background: #eeeae1;
+    height: 170px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 65px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.produto h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.categoria-produto {
+    color: #999;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.produto-descricao {
+    color: #777;
+    font-size: 14px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.preco {
+    color: #a47d27;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 18px 0;
+}
+
+.produto button {
+    width: 100%;
+    padding: 13px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.produto button:hover {
+    background: #c9a34a;
+    color: #111;
+}
+
+.sem-produtos {
+    grid-column: 1 / -1;
+    padding: 30px;
+    color: #777;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer h2 {
+    color: #c9a34a;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #ccc;
+}
+
+.copyright {
+    margin-top: 25px;
+    font-size: 13px;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 850px) {
+
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .lista-produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .banner h1 {
+        font-size: 42px;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .lista-produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .banner {
+        padding: 60px 7%;
+    }
+
+    .banner h1 {
+        font-size: 36px;
+    }
+
+}

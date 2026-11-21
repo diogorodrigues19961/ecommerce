@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Senha | Men's Store</title>
+</head>
+<body>
+
+    <h1>Alterar minha senha</h1>
+
+    <form method="POST" action="/alterar-senha">
+
+        <label>Senha atual:</label>
+        <input type="password" name="senha_atual" required>
+
+        <label>Nova senha:</label>
+        <input
+            type="password"
+            name="nova_senha"
+            minlength="12"
+            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{12,}"
+            title="Use pelo menos 12 caracteres, uma letra maiúscula, uma minúscula e um número."
+            required
+        >
+
+        <label>Confirmar nova senha:</label>
+        <input
+            type="password"
+            name="confirmar_senha"
+            minlength="12"
+            required
+        >
+
+        <button type="submit">SALVAR NOVA SENHA</button>
+
+    </form>
+
+    <p>{{ mensagem }}</p>
+
+    <a href="/minha-conta">Voltar para minha conta</a>
+
+</body>
+</html>

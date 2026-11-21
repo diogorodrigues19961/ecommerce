@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minha Conta | Men's Store</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='minha_conta.css') }}">
+</head>
+
+<body>
+
+    <main class="conta">
+
+        <h1>MEN'S <span>STORE</span></h1>
+
+        <h2>Minha conta</h2>
+
+        <p>Bem-vindo, {{ nome }}!</p>
+
+        <p>Você está conectado à sua conta.</p>
+
+        <a href="/alterar-senha">ALTERAR MINHA SENHA</a>
+
+        <a href="/" class="voltar">Voltar para a loja</a>
+
+    </main>
+
+</body>
+</html>

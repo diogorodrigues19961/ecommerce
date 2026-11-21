@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Men's Store | Produtos Masculinos</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <div class="logo">
+            MEN'S <span>STORE</span>
+        </div>
+
+    <nav>
+    <a href="#inicio">Início</a>
+    <a href="#categorias">Categorias</a>
+    <a href="#produtos">Produtos</a>
+    <a href="/cadastro">Minha conta</a>
+    </nav> 
+
+        <button class="botao-carrinho" onclick="verCarrinho()">
+            🛒 Carrinho
+            (<span id="contador">0</span>)
+        </button>
+
+    </header>
+
+
+    <!-- BANNER -->
+
+    <section class="banner" id="inicio">
+
+        <div class="banner-conteudo">
+
+            <p class="subtitulo">MEN'S STORE</p>
+
+            <h1>
+                SEU ESTILO.<br>
+                SEU CUIDADO.
+            </h1>
+
+            <p>
+                Produtos selecionados para cuidar,
+                modelar e transformar seu visual.
+            </p>
+
+            <a href="#produtos" class="botao-banner">
+                CONHECER PRODUTOS
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIAS -->
+
+    <section class="categorias" id="categorias">
+
+        <h2>CATEGORIAS</h2>
+
+        <p class="descricao">
+            Encontre o produto ideal para seu cabelo.
+        </p>
+
+        <div class="botoes-categorias">
+
+            <button onclick="filtrar('Todos')">Todos</button>
+
+            <button onclick="filtrar('Pomadas')">Pomadas</button>
+
+            <button onclick="filtrar('Ceras')">Ceras</button>
+
+            <button onclick="filtrar('Shampoos')">Shampoos</button>
+
+            <button onclick="filtrar('Tratamentos')">Tratamentos</button>
+
+            <button onclick="filtrar('Barba')">Barba</button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUTOS -->
+
+    <main id="produtos">
+
+        <h2>NOSSOS PRODUTOS</h2>
+
+        <p class="descricao">
+            Qualidade e cuidado para o homem moderno.
+        </p>
+
+        <div class="lista-produtos" id="lista-produtos">
+
+        </div>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <h2>MEN'S STORE</h2>
+
+        <p>
+            Estilo, cuidado e personalidade.
+        </p>
+
+        <p class="copyright">
+            © 2026 Men's Store. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+<script src="{{ url_for('static', filename='scrpity.js') }}"></script>
+
+</body>
+
+</html>
